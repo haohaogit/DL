@@ -116,12 +116,13 @@ def plot_decision_boundary(model, X, y):
     plt.show()
 
 parameters = model(train_X, train_Y, initialization = "random",print_coat=True)
-print ("On the train set:")
 predictions_train = predict(train_X, parameters)
-print ("On the test set:")
+
 predictions_test = predict(test_X, parameters)
 print("train accuraty: {} %".format(100 - np.mean(np.abs(predictions_train - train_Y)) * 100))
 print("test accuraty: {}%".format(100 - np.mean(np.abs(predictions_test - test_Y)) * 100))
+
+print("gittest")
 
 plt.title("Model with large random initialization")
 axes = plt.gca()
